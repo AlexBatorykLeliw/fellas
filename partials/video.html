@@ -1,16 +1,22 @@
 <div id="big_wrapper">
 	<section id="skin">
-	<video id="myMovie" width="640" height="360">
-		<source src="videos/testVideo.mp4"/>
-	</video>
-		<nav>
+		<video id="myMovie" width="640" height="360">
+			<source ng-src="videos/testVideo.mp4"/>
+		</video>
+		<div id="videoPlayer">
 			<div id="buttons">
-				<button type="button" id="playButton" ng-click="playOrPause()">Play</button>
-			</div>
-			<div id="defaultBar" ng-click="clickedBar(this)">
-				<div id="progressBar"></div>
+				<img id="playButton" ng-src="videoPlayerImages/playbutton.png"/>
+				<img id="pauseButton" ng-src="videoPlayerImages/pausebutton.png" style="display:none;"/>
+ 				<img id="muteButton" src="videoPlayerImages/mutebutton.png" style="display:none;"/>
+				<img id="lowVolumeButton" src="videoPlayerImages/low-volumebutton.png"/>
+				<img id="highVolumeButton" src="videoPlayerImages/high-volumebutton.png" style="display:none;"/>
+				<img id="nextButton" src="videoPlayerImages/nextbutton.png"/>
+				<input id="seekSlider" type="range" min="0" max="100" value="0" step="1" style="width:250px;"/>
+				<span id="currentTimeText"></span>/<span id="durationTimeText"></span>
+				<input id="volumeSlider" type="range" min="0" max="100" value="50" step="1" style="width:100px;"/>
+				<button id="fullScreen">[ ]</button>
 			</div>
 			<div style="clear:both"></div>
-		</nav>
+		</div>
 	</section>
 </div>

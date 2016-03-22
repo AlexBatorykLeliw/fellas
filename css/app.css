@@ -105,32 +105,39 @@ color: #222;
 
 #skin {
 	width:700px;
-	margin:10px auto;
+	margin:100px auto;
 	padding:5px;
-	background:red;
+	background:blue;
 	border:4px solid black;
 	border-radius:10px;
 }
-nav {
-	margin: 5px 0px;
+
+input[type=range]{
+    /* fix for FF unable to apply focus style bug  */
+    border: 1px solid white; 
 }
-#buttons {
-	float:left;
-	width:70px;
-	height:22px;
+
+input[type=range]::-moz-range-track {
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
 }
-#defaultBar {
-	position:relative;
-	float:left;
-	width:600px;
-	height:16px;
-	padding:4px;
-	border: 2px solid black;
-	background:yellow;
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: red;
 }
-#progressBar {
-	position:absolute;
-	width:0px;
-	height:16px;
-	background:blue;
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+    background: #ccc;
 }
