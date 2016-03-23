@@ -1,5 +1,4 @@
-angular.module('slider.directive', ['ngAnimate'])
-  .directive('slider', function ($timeout) {
+  myapp.directive('slider', function ($timeout) {
   return {
     restrict: 'AE',
     replace: true,

@@ -1,12 +1,10 @@
-var appController = angular.module('appController',[]);
-
 /******* STATE1 *******/
-appController.controller('state1controller', ['$scope', function($scope){
+myapp.controller('state1controller', ['$scope', function($scope){
 	$scope.items = ["A", "List", "Of", "Items"];
 }]);
 
 /******* SLIDER *******/
-appController.controller('slidercontroller', ['$scope', function($scope) {
+myapp.controller('slidercontroller', ['$scope', function($scope) {
     $scope.pictures=[
 	    				{src:'img1.png',title:'Pic 1'},
 	    				{src:'img2.jpg',title:'Pic 2'},
@@ -17,8 +15,8 @@ appController.controller('slidercontroller', ['$scope', function($scope) {
 }]);
 
 /******* VIDEO *******/
-appController.controller('videocontroller', ['$scope', function($scope) {
-	
+myapp.controller('videocontroller', ['$scope', function($scope) {
+	console.log("in");
     /**
      * Array to hold source path and titles.
      */
